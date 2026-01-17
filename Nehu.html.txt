@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Nehu ❤️</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+  background: radial-gradient(circle at top, #1b1b2f, #0f0f1a);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+section{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  text-align:center;
+  padding:40px 20px;
+}
+
+h1{
+  font-size:3rem;
+  margin-bottom:15px;
+}
+
+h2{
+  font-size:2rem;
+  margin-bottom:10px;
+}
+
+p{
+  font-size:1.1rem;
+  max-width:700px;
+  line-height:1.7;
+  opacity:0.9;
+}
+
+.glow{
+  color:#ff7ad9;
+  text-shadow:0 0 20px rgba(255,122,217,0.6);
+}
+
+button{
+  margin-top:30px;
+  padding:14px 30px;
+  font-size:1rem;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(135deg,#ff7ad9,#8f7aff);
+  color:#fff;
+  cursor:pointer;
+  transition:0.3s ease;
+}
+
+button:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 20px rgba(143,122,255,0.6);
+}
+
+.fade{
+  opacity:0;
+  transform:translateY(40px);
+  transition:1s ease;
+}
+
+.fade.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+footer{
+  padding:20px;
+  font-size:0.9rem;
+  opacity:0.6;
+}
+</style>
+</head>
+
+<body>
+
+<section>
+  <h1 class="glow fade">Happy Birthday Nehu 🎂</h1>
+  <p class="fade">
+    Aaj ka din sirf tumhare liye hai.  
+    Tumhari smile, tumhari energy, aur tumhara hona — sab kuch special hai.
+  </p>
+  <button onclick="scrollNext()">Start the Journey ✨</button>
+</section>
+
+<section>
+  <h2 class="fade">Why You’re Special 💖</h2>
+  <p class="fade">
+    Tumhari simplicity hi tumhari sabse badi beauty hai.  
+    Tum saath ho toh cheezein automatically better lagti hain.
+  </p>
+</section>
+
+<section>
+  <h2 class="fade">A Little Promise 🌙</h2>
+  <p class="fade">
+    Chahe time badle, situations badlein —  
+    respect, care aur honesty hamesha same rahegi.
+  </p>
+</section>
+
+<section>
+  <h2 class="fade glow">Once Again… Happy Birthday Nehu ❤️</h2>
+  <p class="fade">
+    May this year bring you peace, growth, and endless reasons to smile.
+  </p>
+</section>
+
+<footer>
+  Made with ❤️ just for Nehu
+</footer>
+
+<script>
+const fades = document.querySelectorAll('.fade');
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+},{threshold:0.2});
+
+fades.forEach(fade=>observer.observe(fade));
+
+function scrollNext(){
+  window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>
